@@ -1,26 +1,57 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --text-primary: #171717;
+  --text-secondary: #555;
+  --hover-bg: rgba(0, 0, 0, 0.05);
+  --toggle-off-bg: #e5e7eb;
+  --select-toggle: #ffffff;
+  --card-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+  --border-button: #424242;
+  --bg-form: #ffffff;
+  --border-color: #ECECEC;
+  --bg-button: #ECECEC;
+  --bg-button-form: #ffffff;
+  --social-hover-border: black;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html[data-theme="dark"] {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #121212;
+  --text-primary: #ededed;
+  --text-secondary: #aaa;
+  --select-toggle: #2F2F2F;
+  --hover-bg: rgba(255, 255, 255, 0.432);
+  --toggle-off-bg: #e5e7eb;
+  --card-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.35);
+  --border-button: #424242;
+  --bg-form: #212121;
+  --border-color: #424242;
+  --bg-button: #1b1b1b;
+  --bg-button-form: #353434;
+  --social-hover-border: white;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('../public/fonts/vazirmatn/Vazirmatn-Light.woff2') format('woff2');
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Vazirmatn', sans-serif;
+  background-color: #f9fafb;
+}
+
+.auth-card {
+  background-color: var(--bg-form);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  box-shadow: var(--card-shadow);
+
+  width: 100%;
+  max-width: 440px;
+
+  padding: 40px;
 }
