@@ -38,7 +38,6 @@ export default function AuthCard() {
     }
 
     setErrorKey('');
-    // submit logic here
   };
 
   return (
@@ -274,4 +273,4 @@ export default function AuthCard() {
 
     </div>
   );
-}
+} 
